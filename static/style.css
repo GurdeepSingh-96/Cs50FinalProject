@@ -1,0 +1,57 @@
+body.clear { background-color: #87CEEB; } /* Azzurro cielo */
+body.rain { background-color: #607D8B; }  /* Grigio pioggia */
+body.clouds { background-color: #B0BEC5; } /* Grigio chiaro */
+body.snow { background-color: #f0f8ff; }
+
+
+/* Impostazioni generali per centrare tutto */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease; /* Transizione fluida del colore! */
+}
+
+/* Stile per il contenitore principale */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Stile per l'input e il bottone */
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
