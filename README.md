@@ -1,5 +1,5 @@
 # FiftyWeather
-#### Video Demo: <URL HERE>
+#### Video Demo: [<URL HERE>](https://youtu.be/QfxwjuGk4Ic)
 #### Description:
 
 ## Overview
