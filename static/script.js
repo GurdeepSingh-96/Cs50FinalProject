@@ -1,5 +1,5 @@
 document.getElementById('searchBtn').addEventListener('click', async () => {
-    const city = document.getElementById('cityInput').value; // CORRETTO: .value
+    const city = document.getElementById('cityInput').value; 
     const resultDiv = document.getElementById('weatherResult');
 
     if (!city) {
@@ -16,7 +16,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         const data = await response.json(); // La variabile vive qui dentro
 
         if (data.cod !== 200) {
-            throw new Error(data.message || "Città non trovata");
+            throw new Error(data.message || "City not found");
         }
 
         // Cambio stile dinamico
@@ -26,12 +26,20 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
         // Visualizzazione risultati
         resultDiv.innerHTML = `
-            <h3>Meteo a ${data.name}</h3>
-            <p>Temperatura: ${data.main.temp}°C</p>
-            <p>Condizione: ${data.weather[0].description}</p>
+            <h3>Weather in ${data.name}</h3>
+            <p>Temperature: ${data.main.temp.toFixed(0)}°C</p>
+            <p>Condition: ${data.weather[0].description}</p>
         `;
 
     } catch (error) {
         alert("Error: " + error.message);
+    }
+
+
+})
+    // start search with "Enter" key
+document.getElementById('cityInput').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        document.getElementById('searchBtn').click();
     }
 });

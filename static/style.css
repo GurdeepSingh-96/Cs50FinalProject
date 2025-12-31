@@ -1,11 +1,14 @@
-body.clear { background-color: #87CEEB; } /* Azzurro cielo */
-body.rain { background-color: #607D8B; }  /* Grigio pioggia */
-body.clouds { background-color: #B0BEC5; } /* Grigio chiaro */
-body.snow { background-color: #f0f8ff; }
-
+body.clear  { background: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%); } 
+body.clouds { background: linear-gradient(to bottom, #bdc3c7, #2c3e50); }
+body.rain   { background: linear-gradient(to bottom, #203a43, #2c5364); }
+body.drizzle { background: linear-gradient(to bottom, #89f7fe 0%, #66a6ff 100%); }
+body.thunderstorm { background: linear-gradient(to bottom, #1e3c72, #2a5298); }
+body.snow   { background: linear-gradient(to bottom, #e6e9f0 0%, #eef1f5 100%); }
+body.mist, body.smoke, body.haze, body.fog { background: linear-gradient(to bottom, #757f9a, #d7dde8); }
 
 /* Impostazioni generali per centrare tutto */
 body {
+    background-color: #f5f5f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
